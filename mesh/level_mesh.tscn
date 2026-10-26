@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://dx2aieopkayui"]
+
+[ext_resource type="PackedScene" uid="uid://hlvek5ca28v1" path="res://graphics/gltf/prototype.gltf" id="1_vfci0"]
+[ext_resource type="PackedScene" uid="uid://bldp5t6hkf1n1" path="res://graphics/gltf/lava.gltf" id="2_rvc3j"]
+[ext_resource type="PackedScene" uid="uid://dm41a6neon6ee" path="res://graphics/gltf/grass.gltf" id="3_1fwxr"]
+[ext_resource type="PackedScene" uid="uid://bwtpesmihf5qw" path="res://graphics/gltf/dirt.gltf" id="4_lrvyo"]
+[ext_resource type="PackedScene" uid="uid://bbhpdquvcslxk" path="res://graphics/gltf/dirt_with_grass.gltf" id="5_tes2h"]
+[ext_resource type="PackedScene" uid="uid://cdtue2s2tc3qp" path="res://graphics/gltf/stone.gltf" id="6_k5uxj"]
+[ext_resource type="PackedScene" uid="uid://bfqcdnw3aabob" path="res://graphics/gltf/water.gltf" id="7_c1kwq"]
+[ext_resource type="PackedScene" uid="uid://b0le7puqve7im" path="res://graphics/gltf/wood.gltf" id="8_2wujh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2oxwf"]
+size = Vector3(2, 2, 2)
+
+[node name="LevelMesh" type="Node3D" unique_id=1299665254]
+
+[node name="prototype2" parent="." unique_id=1109470093 instance=ExtResource("1_vfci0")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="prototype2/prototype" index="0" unique_id=227965693]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="prototype2/prototype/StaticBody3D" unique_id=1664398276]
+shape = SubResource("BoxShape3D_2oxwf")
+
+[node name="lava2" parent="." unique_id=2050429451 instance=ExtResource("2_rvc3j")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="lava2/lava" index="0" unique_id=1139033781]
+
+[node name="CollisionShape3D" parent="lava2/lava/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_2oxwf")
+
+[node name="grass2" parent="." unique_id=1117872295 instance=ExtResource("3_1fwxr")]
+visible = false
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="grass2/grass" index="0" unique_id=709078451]
+
+[node name="CollisionShape3D" parent="grass2/grass/StaticBody3D2" index="0"]
+shape = SubResource("BoxShape3D_2oxwf")
+
+[node name="dirt2" parent="." unique_id=1665621232 instance=ExtResource("4_lrvyo")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="dirt2/dirt" index="0" unique_id=453045951]
+
+[node name="CollisionShape3D" parent="dirt2/dirt/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_2oxwf")
+
+[node name="dirt_with_grass2" parent="." unique_id=105784196 instance=ExtResource("5_tes2h")]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="dirt_with_grass2/dirt_with_grass" index="0" unique_id=1435469418]
+
+[node name="CollisionShape3D" parent="dirt_with_grass2/dirt_with_grass/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_2oxwf")
+
+[node name="stone2" parent="." unique_id=748791852 instance=ExtResource("6_k5uxj")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="stone2/stone" index="0" unique_id=1938474411]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stone2/stone/StaticBody3D" unique_id=1134227224]
+shape = SubResource("BoxShape3D_2oxwf")
+
+[node name="water2" parent="." unique_id=1731241363 instance=ExtResource("7_c1kwq")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="water2/water" index="0" unique_id=859525798]
+
+[node name="CollisionShape3D" parent="water2/water/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_2oxwf")
+
+[node name="wood2" parent="." unique_id=95398128 instance=ExtResource("8_2wujh")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wood2/wood" index="0" unique_id=1062398248]
+
+[node name="CollisionShape3D" parent="wood2/wood/StaticBody3D" index="0"]
+shape = SubResource("BoxShape3D_2oxwf")
+
+[editable path="prototype2"]
+[editable path="lava2"]
+[editable path="grass2"]
+[editable path="dirt2"]
+[editable path="dirt_with_grass2"]
+[editable path="stone2"]
+[editable path="water2"]
+[editable path="wood2"]
